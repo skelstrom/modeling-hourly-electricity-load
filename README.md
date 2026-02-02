@@ -30,17 +30,14 @@ The analysis compares three modeling paradigms:
 
 Rather than focusing solely on accuracy, this work examines how models behave, scale, and explain themselves in an operational forecasting context.
 
-🔍 Key Findings
+## 🔍 Key Findings
 
-   Hourly electricity demand exhibits strong autoregressive structure
+- Hourly electricity demand exhibits strong autoregressive structure  
+- SARIMAX consistently outperforms more complex models for short-horizon forecasting  
+- Models with explicit temporal inductive bias are best suited to this problem  
+- More complex models are not always more deployable, despite greater flexibility  
+- Classical models remain competitive when the data-generating process is well understood
 
-   SARIMAX consistently outperforms more complex models for short-horizon forecasting
-
-   Models with explicit temporal inductive bias are best suited to this problem
-
-   More complex models are not always more deployable, despite greater flexibility
-
-   Classical models remain competitive when the data-generating process is well understood
 
 .
 ├── artifacts/              # Saved figures for reports / GitHub
