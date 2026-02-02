@@ -1,0 +1,59 @@
+# =========================
+# Python bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# =========================
+# Virtual environments
+# =========================
+.env
+.venv/
+venv/
+env/
+
+# =========================
+# Jupyter / IPython
+# =========================
+.ipynb_checkpoints/
+.profile_default/
+
+#==========================
+# Large Data Files
+#==========================
+data/raw/
+data/interim/
+
+# =========================
+# Model Artifacts
+# =========================
+models/trained_models/
+models/**/*.pkl
+models/**/*.pt
+models/**/*.joblib
+
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Logs / temp files
+# =========================
+logs/
+tmp/
+*.log
+
+# =========================
+# Credentials / secrets
+# =========================
+*.env
+.env.*
+secrets/
