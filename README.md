@@ -2,33 +2,29 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 
-📊 Hourly Electricity Load Forecasting
+## 📊 Hourly Electricity Load Forecasting
 
-Time Series, Machine Learning, and Deep Learning ComparisonOverview
+### Time Series, Machine Learning, and Deep Learning Comparison
 
-This project evaluates multiple modeling approaches for hourly electricity load forecasting, with an emphasis on:
+This project evaluates multiple modeling approaches for **hourly electricity load forecasting**, with emphasis on both predictive performance and operational suitability.
 
-   Forecast accuracy
+**Evaluation dimensions include:**
 
-   Uncertainty calibration
+- Forecast accuracy  
+- Uncertainty calibration  
+- Residual behavior  
+- Computational efficiency  
+- Interpretability  
+- Deployability  
 
-   Residual behavior
+Three modeling paradigms are compared:
 
-   Computational efficiency
+- **SARIMAX** — classical statistical time series modeling  
+- **Gradient Boosting** — tree-based machine learning  
+- **Temporal Fusion Transformer (TFT)** — deep learning for time series  
 
-   Interpretability
+Rather than focusing solely on accuracy, this work examines how models **behave, scale, and explain themselves** in a real-world operational forecasting context.
 
-   Deployability
-
-The analysis compares three modeling paradigms:
-
-   SARIMAX — classical statistical time series
-
-   Gradient Boosting — tree-based machine learning
-
-   Temporal Fusion Transformer (TFT) — deep learning for time series
-
-Rather than focusing solely on accuracy, this work examines how models behave, scale, and explain themselves in an operational forecasting context.
 
 ## 🔍 Key Findings
 
@@ -39,37 +35,41 @@ Rather than focusing solely on accuracy, this work examines how models behave, s
 - Classical models remain competitive when the data-generating process is well understood
 
 
-.
-├── artifacts/              # Saved figures for reports / GitHub
-├── data/
-│   ├── raw/                # Original source datasets (tracked, immutable)
-│   ├── interim/            # Cleaned / partially transformed datasets
-│   └── processed/          # Final feature-engineered modeling datasets
-├── models/                 # Trained model artifacts (tracked)
-├── notebooks/              # Analysis notebooks (executed, with outputs)
-├── src/                    # Reusable code (config, helpers, pipelines)
-├── requirements.txt        # Reproducible environment
-├── .gitignore
-└── README.md
+## Repository Structure
+
+```text
+artifacts/          # Saved figures for reports / GitHub
+data/
+├── raw/            # Original source datasets (immutable)
+├── interim/        # Cleaned / partially transformed datasets
+└── processed/      # Final feature-engineered modeling datasets
+models/             # Trained model artifacts (ignored)
+notebooks/          # Analysis notebooks (executed, with outputs)
+src/                # Reusable code (config, helpers, pipelines)
+requirements.txt    # Reproducible environment
+.gitignore
+README.md
+```
 
 
-🔄 Data Lineage
+## 🔄 Data Lineage
 
-   data/raw/
-      ↓
-   data/interim/        (cleaning, alignment, joins)
-      ↓
-   data/processed/     (feature engineering, lags, rolling statistics)
-      ↓
-   model training & evaluation
+```text
+data/raw/
+   ↓
+data/interim/        (cleaning, alignment, joins)
+   ↓
+data/processed/     (feature engineering, lags, rolling statistics)
+   ↓
+model training & evaluation
+```
+- raw/ data is immutable
 
-   raw/ data is immutable
+- interim/ captures intermediate transformation steps
 
-   interim/ captures intermediate transformation steps
+- processed/ contains modeling-ready features
 
-   processed/ contains modeling-ready features
-
-   This separation ensures transparent data lineage and enables partial pipeline re-runs without recomputing everything.
+This separation ensures transparent data lineage and enables partial pipeline re-runs without recomputing everything.
 
 ▶️ How to Reproduce the Analysis
 
@@ -99,30 +99,27 @@ Rather than focusing solely on accuracy, this work examines how models behave, s
    All datasets and trained models load automatically from disk.
  
 
-🧠 Model Evaluation Dimensions
+```markdown
+## 🧠 Model Evaluation Dimensions
 
-Accuracy
+### Accuracy
+- MAE  
+- RMSE  
+- MASE  
 
-   MAE, RMSE, MASE
+### Uncertainty
+- Coverage (90%)  
+- Weighted Interval Score (WIS)  
 
-Uncertainty
+### Efficiency
+- Inference runtime  
+- Model Efficiency Ratio (MER)  
 
-   Coverage (90%), Weighted Interval Score (WIS)
-
-Efficiency
-
-   Inference runtime
-
-   Model Efficiency Ratio (MER)
-
-Interpretability
-
-   SARIMAX: standardized coefficients
-
-   Gradient Boosting: SHAP
-
-   TFT: attention mechanisms
-
+### Interpretability
+- **SARIMAX:** standardized coefficients  
+- **Gradient Boosting:** SHAP values  
+- **TFT:** attention mechanisms
+```
 🚀 Deployment Perspective
 
 This project explicitly evaluates deployability, showing that:
