@@ -71,12 +71,14 @@ model training & evaluation
 
 This separation ensures transparent data lineage and enables partial pipeline re-runs without recomputing everything.
 
-▶️ How to Reproduce the Analysis
+## ▶️ How to Reproduce the Analysis
 
-1. Clone the repository
+### 1. Clone the repository
 
-   git clone https://github.com/<your-username>/<repo-name>.git
-   cd <repo-name>
+```bash
+git clone https://github.com/skelstrom/modeling-hourly-electricity-load.git
+cd modeling-hourly-electricity-load
+
 
 2. Create and activate a virtual environment
 
@@ -120,24 +122,22 @@ This separation ensures transparent data lineage and enables partial pipeline re
 - **Gradient Boosting:** SHAP values  
 - **TFT:** attention mechanisms
 ```
-🚀 Deployment Perspective
 
-This project explicitly evaluates deployability, showing that:
+## 🚀 Deployment Perspective
 
-   Simpler models can outperform deep learning when structure is well understood
+This project explicitly evaluates **deployability**, demonstrating that:
 
-   Interpretability and stability matter as much as raw accuracy
+- Simpler models can outperform deep learning when structure is well understood  
+- Interpretability and stability matter as much as raw accuracy  
+- SARIMAX remains a strong baseline for operational electricity load forecasting  
 
-   SARIMAX remains a strong baseline for operational electricity load forecasting
+## 📌 Notes
 
-📌 Notes
+- Raw data and trained models are intentionally tracked for reproducibility  
+- Secrets and API keys are excluded via `.gitignore`  
+- Figures used in the analysis are exported to `artifacts/`  
 
-   Raw data and trained models are intentionally tracked for reproducibility
+## 📝 License
 
-   Secrets and API keys are excluded via .gitignore
-
-   Figures used in the analysis are exported to artifacts/
-
-📝 License
-
-   MIT License 
+MIT License
+ 
