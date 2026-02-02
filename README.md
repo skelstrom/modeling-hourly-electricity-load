@@ -73,20 +73,20 @@ This separation ensures transparent data lineage and enables partial pipeline re
 
 ## ▶️ How to Reproduce the Analysis
 
+```bash
 ### 1. Clone the repository
 
-```bash
 git clone https://github.com/skelstrom/modeling-hourly-electricity-load.git
 cd modeling-hourly-electricity-load
 
 
-2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment
 
    python -m venv .venv
    source .venv/bin/activate        # macOS / Linux
    .venv\Scripts\activate         # Windows
 
-3. Install dependencies (via notebook)
+### 3. Install dependencies (via notebook)
 
    ⚠️ Important: Dependencies are installed via the environment setup notebook.
 
@@ -94,15 +94,15 @@ cd modeling-hourly-electricity-load
 
    This notebook installs all required libraries and system dependencies.
 
-4. Run the modeling notebook
+### 4. Run the modeling notebook
 
    notebooks/02_Modeling_and_Evaluation.ipynb
 
    All datasets and trained models load automatically from disk.
- 
+ ```
 
-```markdown
 ## 🧠 Model Evaluation Dimensions
+```markdown
 
 ### Accuracy
 - MAE  
