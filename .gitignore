@@ -57,3 +57,4 @@ tmp/
 *.env
 .env.*
 secrets/
+.Rhistory
